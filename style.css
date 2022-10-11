@@ -1,0 +1,47 @@
+body{
+    background-color: black;
+}
+
+.place{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    border-radius: 10px;
+}
+#a1{
+    top: 0px;
+    left: 200px;
+}
+#a2{
+    top: 0px;
+    left:310px;
+}
+#a3{
+    top: 0px;
+    left:420px;
+}
+#a4{
+    top: 110px;
+    left:200px;
+}
+#a5{
+    top: 110px;
+    left: 310px;
+}
+#a6{
+    top: 110px;
+    left: 420px;
+}
+#a7{
+    top: 220px;
+    left: 200px;
+}
+#a8{
+    top: 220px;
+    left: 310px;
+}
+#a9{
+    top: 220px;
+    left: 420px;
+}
