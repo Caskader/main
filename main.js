@@ -406,7 +406,7 @@ function secondplay(peg) {
             put('c4', ca)
             puten3.push('c4')
         }
-        else if (puten2[1] == 't1') {
+        else if (puten2[1] == 't4') {
             put('t4', ca)
             puten3.push('t4')
         }
@@ -419,7 +419,8 @@ function secondplay(peg) {
             puten3.push('t2')
         }
         else if (puten2[1] == 'c4') {
-            t = true;
+            put('c1',ca)
+            puten3.push('c1')
         }
         else if (puten2[1] == 't4') {
             put('t1', ca)
