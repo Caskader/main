@@ -603,8 +603,8 @@ function secondplay(peg) {
                 puten3.push('m')
             }
             if (puten2[1] == 't2') {
-                put('c2', ca)
-                puten3.push('c2')
+                put('m', ca)
+                puten3.push('m')
             }
             else {
                 put('m', ca)
@@ -1105,265 +1105,469 @@ function thirdplay() {
 
 function fourthplay() {
     var t
-    for (let i = 0; i < 4; i++) {
+    var z = 0
+    for (let i = 0; i < 3; i++) {
         t = false;
         var b = i + 1
         if (i == 0) {
             b = 2
         }
-        console.log(i, b)
-        if (puten2[i] == 'c1') {
-            if (puten2[b] == 't1') {
-                put('c2', ca)
-                puten3.push('c2')
-            }
-            else if (puten2[b] == 'm') {
-                put('c4', ca)
-                puten3.push('c4')
-            }
-            else if (puten2[b] == 't2') {
-                put('c3', ca)
-                puten3.push('c3')
-            }
-            else if (puten2[b] == 'c2') {
-                put('t1', ca)
-                puten3.push('t1')
-            }
-            else if (puten2[b] == 'c4') {
-                t = true;
-            }
-            else if (puten2[b] == 'c3') {
-                put('t2', ca)
-                puten3.push('t2')
-            } else {
-                t = true;
-            }
-        }
-        else if (puten2[i] == 't1') {
-            if (puten2[b] == 'c1') {
-                put('c2', ca)
-                puten3.push('c2')
-            }
-            else if (puten2[b] == 'c2') {
-                put('c1', ca)
-                puten3.push('c1')
-            }
-            else if (puten2[b] == 'm') {
-                put('t4', ca)
-                puten3.push('t4')
-            }
-            else if (puten2[2] == 't4') {
-                put('m', ca)
-                puten3.push('m')
-            } else {
-                t = true;
-            }
-        }
-        else if (puten2[i] == 'c2') {
-            if (puten2[2] == 't1') {
-                put('c1', ca)
-                puten3.push('c1')
-            }
-            else if (puten2[2] == 'm') {
-                put('c3', ca)
-                puten3.push('c3')
-            }
-            else if (puten2[2] == 't3') {
-                put('c4', ca)
-                puten3.push('c4')
-            }
-            else if (puten2[2] == 'c4') {
-                put('t3', ca)
-                puten3.push('t3')
-            }
-            else if (puten2[2] == 'c3') {
-                t = true;
-            }
-            else if (puten2[2] == 'c1') {
-                put('t1', ca)
-                puten3.push('t1')
-            } else {
-                t = true;
-            }
-        }
-        else if (puten2[i] == 't2') {
-            if (puten2[2] == 'c1') {
-                put('c3', ca)
-                puten3.push('c3')
-            }
-            else if (puten2[2] == 'm') {
-                put('t3', ca)
-                puten3.push('t3')
-            }
-            else if (puten2[2] == 'c3') {
-                if (i == 0 && b == 2) {
-                    t = true
-                }
-                else {
-                    put('c1', ca)
-                    puten3.push('c1')
-                }
-            }
-            else if (puten2[2] == 't3') {
-                put('m', ca)
-                puten3.push('m')
-            } else {
-                t = true;
-            }
-        }
-        else if (puten2[i] == 'm') {
-            if (puten2[2] == 'c1') {
-                put('c4', ca)
-                puten3.push('c4')
-            }
-            else if (puten2[2] == 't1') {
-                put('t4', ca)
-                puten3.push('t4')
-            }
-            else if (puten2[2] == 'c2') {
-                put('c3', ca)
-                puten3.push('c3')
-            }
-            else if (puten2[2] == 't3') {
-                put('t2', ca)
-                puten3.push('t2')
-            }
-            else if (puten2[2] == 'c4') {
-                t = true;
-            }
-            else if (puten2[2] == 't4') {
-                put('t1', ca)
-                puten3.push('t1')
-            }
-            else if (puten2[2] == 'c3') {
-                put('c2', ca)
-                puten3.push('c2')
-            }
-            else if (puten2[2] == 't2') {
-                put('t3', ca)
-                puten3.push('t3')
-            } else {
-                t = true;
-            }
-        }
-        else if (puten2[i] == 'c3') {
-            if (puten2[b] == 't2') {
-                put('c1', ca)
-                puten3.push('c1')
-            }
-            else if (puten2[b] == 'm') {
-                put('c2', ca)
-                puten3.push('c2')
-            }
-            else if (puten2[b] == 't4') {
-                put('c4', ca)
-                puten3.push('c4')
-            }
-            else if (puten2[b] == 'c1') {
-                put('t2', ca)
-                puten3.push('t2')
-            }
-            else if (puten2[b] == 'c2') {
-                put('m', ca)
-                puten3.push("t2")
-            }
-            else if (puten2[b] == 'c4') {
-                put('t4', ca)
-                puten3.push('t4')
-            } else {
-                t = true;
-            }
-        }
-        else if (puten2[i] == 't4') {
-            if (puten2[b] == 'c3') {
-                put('c4', ca)
-                puten3.push('c4')
-            }
-            else if (puten2[b] == 'm') {
-                put('t1', ca)
-                puten3.push('t1')
-            }
-            else if (puten2[b] == 'c4') {
-                put('c3', ca)
-                puten3.push('c3')
-            }
-            else if (puten2[b] == 't1') {
-                put('m', ca)
-                puten3.push('m')
-            } else {
-                t = true;
-            }
-        }
-        else if (puten2[i] == 'c4') {
-            if (puten2[b] == 't4') {
-                put('c3', ca)
-                puten3.push('c3')
-            }
-            else if (puten2[b] == 'm') {
-                put('c1', ca)
-                puten3.push('c1')
-            }
-            else if (puten2[b] == 't3') {
-                put('c2', ca)
-                puten3.push('c2')
-            }
-            else if (puten2[b] == 'c2') {
-                put('t3', ca)
-                puten3.push('t3')
-            }
-            else if (puten2[b] == 'c3') {
-                put('t4', ca)
-                puten3.push('t4')
-            }
-            else if (puten2[b] == 'c1') {
-                t = true;
-            }
-            else {
-                t = true;
-            }
-        }
-        else if (puten2[i] == 't3') {
-            if (puten2[b] == 'c4') {
-                if (i == 0 && b == 2) {
-                    t = true
-                } else {
-                    put('c2', ca)
-                    puten3.push('c2')
-                }
-            }
-            else if (puten2[b] == 'm') {
-                put('t2', ca)
-                puten3.push('t3')
-            }
-            else if (puten2[b] == 'c2') {
-                put('c4', ca)
-                puten3.push('c4')
-            }
-            else if (puten2[b] == 't2') {
-                put('m', ca)
-                puten3.push('m')
-            } else {
-                t = true;
-            }
-        }
+
+        t = search(i, b, t)
+
+        console.log(i, b, t)
         if (t == false) {
             break
         }
     }
-
     if (t == true) {
-        var pegs = ['m', 'c1', 'c2', 'c3', 'c4', 't1', 't2', 't3', 't4']
-        for (const i2 in puten) {
-            if (i2 == 0) {
-            }
-            else {
-                pegs = pegs.filter(less)
-                function less(val) {
-                    return val != puten[i2]
+        t = search(1, 3, t)
+        if (t == true) {
+            t = search(0, 3, t)
+        }
+        if (t == true) {
+            var pegs = ['m', 'c1', 'c2', 'c3', 'c4', 't1', 't2', 't3', 't4']
+            for (const i2 in puten) {
+                if (i2 == 0) {
+                }
+                else {
+                    pegs = pegs.filter(less)
+                    function less(val) {
+                        return val != puten[i2]
+                    }
                 }
             }
+            put(pegs[0], ca)
+            puten3.push(pegs[0])
         }
-        put(pegs[0], ca)
-        puten3.push(pegs[0])
+        console.log("ok", t)
     }
+}
+
+function search(i, b, t) {
+    t = false
+    if (puten2[i] == 'c1') {
+        if (puten2[b] == 't1') {
+            var a = put('c2', ca)
+            if (a == true) {
+                puten3.push('c2')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 'm') {
+            var a = put('c4', ca)
+            if (a == true) {
+                puten3.push('c4')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 't2') {
+            var a = put('c3', ca)
+            if (a == true) {
+                puten3.push('c3')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 'c2') {
+            var a = put('t1', ca)
+            if (a == true) {
+                puten3.push('t1')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 'c4') {
+            var a = put('m', ca)
+            if (a == true) {
+                puten3.push('m')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 'c3') {
+            var a = put('t2', ca)
+            if (a == true) {
+                puten3.push('t2')
+            } else {
+                t = true;
+            }
+        } else {
+            t = true;
+        }
+    }
+    else if (puten2[i] == 't1') {
+        if (puten2[b] == 'c1') {
+            var a = put('c2', ca)
+            if (a == true) {
+                puten3.push('c2')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 'c2') {
+            var a = put('c1', ca)
+            if (a == true) {
+                puten3.push('c1')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 'm') {
+            var a = put('t4', ca)
+            if (a == true) {
+                puten3.push('t4')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[2] == 't4') {
+            var a = put('m', ca)
+            if (a == true) {
+                puten3.push('m')
+            } else {
+                t = true
+            }
+        } else {
+            t = true;
+        }
+    }
+    else if (puten2[i] == 'c2') {
+        if (puten2[2] == 't1') {
+            var a = put('c1', ca)
+            if (a == true) {
+                puten3.push('c1')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[2] == 'm') {
+            var a = put('c3', ca)
+            if (a == true) {
+                puten3.push('c3')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[2] == 't3') {
+            var a = put('c4', ca)
+            if (a == true) {
+                puten3.push('c4')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[2] == 'c4') {
+            var a = put('t3', ca)
+            if (a == true) {
+                puten3.push('t3')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[2] == 'c3') {
+            var a = put('m', ca)
+            if (a == true) {
+                puten3.push('m')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[2] == 'c1') {
+            var a = put('t1', ca)
+            if (a == true) {
+                puten3.push('t1')
+            } else {
+                t = true
+            }
+        } else {
+            t = true;
+        }
+    }
+    else if (puten2[i] == 't2') {
+        if (puten2[2] == 'c1') {
+            var a = put('c3', ca)
+            if (a == true) {
+                puten3.push('c3')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[2] == 'm') {
+            var a = put('t3', ca)
+            if (a == true) {
+                puten3.push('t3')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[2] == 'c3') {
+            if (i == 0 && b == 2) {
+                t = true
+            }
+            else {
+                put('c1', ca)
+                puten3.push('c1')
+            }
+        }
+        else if (puten2[2] == 't3') {
+            var a = put('m', ca)
+            if (a == true) {
+                puten3.push('m')
+            } else {
+                t = true
+            }
+        } else {
+            t = true;
+        }
+    }
+    else if (puten2[i] == 'm') {
+        if (puten2[b] == 'c1') {
+            var a = put('c4', ca)
+            if (a == true) {
+                puten3.push('c4')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 't1') {
+            var a = put('t4', ca)
+            if (a == true) {
+                puten3.push('t4')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 'c2') {
+            var a = put('c3', ca)
+            if (a == true) {
+                puten3.push('c3')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 't3') {
+            var a = put('t2', ca)
+            if (a == true) {
+                puten3.push('t2')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 'c4') {
+            var a = put('c1', ca)
+            if (a == true) {
+                puten3.push('c1')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 't4') {
+            var a = put('t1', ca)
+            if (a == true) {
+                puten3.push('t1')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 'c3') {
+            var a = put('c2', ca)
+            if (a == true) {
+                puten3.push('c2')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 't2') {
+            console.log("ok",i,b)
+            var a = put('t3', ca)
+            if (a == true) {
+                puten3.push('t3')
+            } else {
+                t = true
+            }
+        } else {
+            t = true;
+        }
+    }
+    else if (puten2[i] == 'c3') {
+        if (puten2[b] == 't2') {
+            var a = put('c1', ca)
+            if (a == true) {
+                puten3.push('c1')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 'm') {
+            var a = put('c2', ca)
+            if (a == true) {
+                puten3.push('c2')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 't4') {
+            var a = put('c4', ca)
+            if (a == true) {
+                puten3.push('c4')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 'c1') {
+            var a = put('t2', ca)
+            if (a == true) {
+                puten3.push('t2')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 'c2') {
+            var a = put('c2', ca)
+            if (a == true) {
+                puten3.push('c2')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 'c4') {
+            var a = put('t4', ca)
+            if (a == true) {
+                puten3.push('t4')
+            } else {
+                t = true
+            }
+        } else {
+            t = true;
+        }
+    }
+    else if (puten2[i] == 't4') {
+        if (puten2[b] == 'c3') {
+            var a = put('c4', ca)
+            if (a == true) {
+                puten3.push('c4')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 'm') {
+            var a = put('t1', ca)
+            if (a == true) {
+                puten3.push('t1')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 'c4') {
+            var a = put('c3', ca)
+            if (a == true) {
+                puten3.push('c3')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 't1') {
+            var a = put('m', ca)
+            if (a == true) {
+                puten3.push('m')
+            } else {
+                t = true
+            }
+        } else {
+            t = true;
+        }
+    }
+    else if (puten2[i] == 'c4') {
+        if (puten2[b] == 't4') {
+            var a = put('c3', ca)
+            if (a == true) {
+                puten3.push('c3')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 'm') {
+            var a = put('c1', ca)
+            if (a == true) {
+                puten3.push('c1')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 't3') {
+            var a = put('c2', ca)
+            if (a == true) {
+                puten3.push('c2')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 'c2') {
+            var a = put('t3', ca)
+            if (a == true) {
+                puten3.push('t3')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 'c3') {
+            var a = put('t4', ca)
+            if (a == true) {
+                puten3.push('t4')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 'c1') {
+            var a = put('m', ca)
+            if (a == true) {
+                puten3.push('m')
+            } else {
+                t = true
+            }
+        }
+        else {
+            t = true;
+        }
+    }
+    else if (puten2[i] == 't3') {
+        if (puten2[b] == 'c4') {
+            if (i == 0 && b == 2) {
+                t = true
+            } else {
+                put('c2', ca)
+                puten3.push('c2')
+            }
+        }
+        else if (puten2[b] == 'm') {
+            var a = put('t2', ca)
+            if (a == true) {
+                puten3.push('t2')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 'c2') {
+            var a = put('c4', ca)
+            if (a == true) {
+                puten3.push('c4')
+            } else {
+                t = true
+            }
+        }
+        else if (puten2[b] == 't2') {
+            var a = put('m', ca)
+            if (a == true) {
+                puten3.push('m')
+            } else {
+                t = true
+            }
+        } else {
+            t = true;
+        }
+    }
+    return t
 }
